@@ -19,8 +19,16 @@
  *   getStringLength(null) => 0
  *   getStringLength(undefined) => 0
  */
-function getStringLength(/* value */) {
-  throw new Error('Not implemented');
+function getStringLength(a) {
+  let d = 0;
+  d = a;
+  if (d === null) {
+    d = '';
+  }
+  if (d === undefined) {
+    d = '';
+  }
+  return d.length;
 }
 
 /**
@@ -37,8 +45,23 @@ function getStringLength(/* value */) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
+function isString(a) {
+  let d = 0;
+  let bool = true;
+  d = a;
+  if (typeof d === 'string') {
+    bool = true;
+  }
+  if (typeof d !== 'string') {
+    bool = false;
+  }
+  if (typeof d === 'object') {
+    bool = false;
+  }
+  if (d instanceof String) {
+    bool = true;
+  }
+  return bool;
 }
 
 /**
@@ -53,8 +76,8 @@ function isString(/* value */) {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function concatenateStrings(a, b) {
+  return a.concat(b);
 }
 
 /**
@@ -68,8 +91,8 @@ function concatenateStrings(/* value1, value2 */) {
  *   getFirstChar('cat') => 'c'
  *   getFirstChar('') => ''
  */
-function getFirstChar(/* value */) {
-  throw new Error('Not implemented');
+function getFirstChar(a) {
+  return a.charAt(0);
 }
 
 /**
