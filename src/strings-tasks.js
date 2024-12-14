@@ -225,8 +225,14 @@ function removeLastOccurrences(str, sub) {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(/* str */) {
-  throw new Error('Not implemented');
+function sumOfCodes(a) {
+  let d = 0;
+  if (a !== null && a !== undefined) {
+    for (let i = 0; i < a.length; i += 1) {
+      d += a.charCodeAt(i);
+    }
+  }
+  return d;
 }
 
 /**
@@ -240,8 +246,12 @@ function sumOfCodes(/* str */) {
  *   startsWith('Hello World', 'World') => false
  *   startsWith('Hello World', 'Hello') => true
  */
-function startsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function startsWith(str, sub) {
+  let d = false;
+  if (str.startsWith(sub)) {
+    d = true;
+  }
+  return d;
 }
 
 /**
@@ -255,8 +265,12 @@ function startsWith(/* str, substr */) {
  *   endsWith('Hello World', 'World') => true
  *   endsWith('Hello World', 'Hello') => false
  */
-function endsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function endsWith(str, sub) {
+  let d = false;
+  if (str.endsWith(sub)) {
+    d = true;
+  }
+  return d;
 }
 
 /**
@@ -272,8 +286,12 @@ function endsWith(/* str, substr */) {
  *   formatTime(0, 45) => "00:45"
  *   formatTime(0, 0) => "00:00"
  */
-function formatTime(/* minutes, seconds */) {
-  throw new Error('Not implemented');
+function formatTime(mi, se) {
+  let m = mi.toString();
+  let s = se.toString();
+  m = m.padStart(2, '0');
+  s = s.padStart(2, '0');
+  return ''.concat(m, ':', s);
 }
 
 /**
@@ -286,8 +304,12 @@ function formatTime(/* minutes, seconds */) {
  *   reverseString('abcdef') => 'fedcba'
  *   reverseString('12345') => '54321'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(a) {
+  let b = '';
+  for (let i = a.length - 1; i > -1; i -= 1) {
+    b = ''.concat(b, a[i]);
+  }
+  return b;
 }
 
 /**
@@ -301,8 +323,14 @@ function reverseString(/* str */) {
  *   orderAlphabetically('textbook') => 'bekoottx'
  *   orderAlphabetically('abc123xyz') => '123abcxyz'
  */
-function orderAlphabetically(/* str */) {
-  throw new Error('Not implemented');
+function orderAlphabetically(str) {
+  let a = [];
+  a = [];
+  for (let i = 0; i < str.length; i += 1) {
+    a[i] = str[i];
+  }
+  a.sort();
+  return a.join('');
 }
 
 /**
@@ -317,8 +345,12 @@ function orderAlphabetically(/* str */) {
  *   containsSubstring('JavaScript is Fun', 'Python') => false
  *   containsSubstring('12345', '34') => true
  */
-function containsSubstring(/* str, substring */) {
-  throw new Error('Not implemented');
+function containsSubstring(str, sub) {
+  let d = false;
+  if (str.includes(sub, 0)) {
+    d = true;
+  }
+  return d;
 }
 
 /**
